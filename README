@@ -1,0 +1,35 @@
+How to install in Unraid:
+
+Go to the docker tab, click Add Container.
+Name: liquidtemp
+Repository: pstewardyul/liquidtemp:latest
+
+Privileged: ON
+
+Click on Add another Path, Port, Variable, Label or Device:
+Config Type: Variable
+Name: Thresholds
+Key: THRESHOLDS_ENV
+Value: 20,25,30,35,40,45
+Save.
+
+Click on Add another Path, Port, Variable, Label or Device:
+Config Type: Variable
+Name: Fan Speeds
+Key: FAN_SPEEDS_ENV
+Value: 20,30,40,50,60,100
+Save.
+
+Click on Add another Path, Port, Variable, Label or Device:
+Config Type: Variable
+Name: Excluded Drives from temp calc
+Key: EXCLUDED_DRIVES_ENV
+Value: {ENTER WHAT EVER DRIVES YOU DON'T WANT TO CHECK TEMP,. example "/dev/sda" }
+Save.
+
+Click on Add another Path, Port, Variable, Label or Device:
+Config Type: Variable
+Name: Fans
+Key: FAN_QUANTITY_ENV
+Value: {ENTER QUANTITY OF FANS UNDER CONTROL, example "3" }
+Save.
